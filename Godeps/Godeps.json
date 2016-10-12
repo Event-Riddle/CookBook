@@ -1,5 +1,5 @@
 {
-	"ImportPath": "mosdev/riddle-api",
+	"ImportPath": "masterjulz/riddle-api",
 	"GoVersion": "go1.7",
 	"GodepVersion": "v74",
 	"Deps": [
