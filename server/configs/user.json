@@ -1,0 +1,9 @@
+{
+  "toolbar":[
+    {"name":"filter", "order":1},
+    {"name":"dedub", "order":2},
+    {"name":"correlator", "order":3},
+    {"name":"unique filter", "order":4}
+  ],
+  "chain":[]
+}

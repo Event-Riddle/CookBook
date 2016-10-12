@@ -1,0 +1,97 @@
+<!-- {{ define "title" }}Go Starter Application{{ end }}
+{{ define "content"}}
+<table>
+	<tr>
+		<td style='width: 30%;'>
+			<img class = 'newappIcon' src='/static/images/newapp-icon.png'>
+		</td>
+		<td>
+			<h1 id="message">Hello World!</h1>
+			<p class='description'></p> Thanks for creating a <span class="blue">Go Starter Application</span>.
+		</td>
+	</tr>
+</table>
+{{ end }} -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../static/strapdown/strapdown.min.css" media="screen" title="no title">
+</head>
+<xmp theme="united" style="display:none;">
+# Riddle API
+---
+### GET /api/v1/config/{type}
+
+**Config Types:** {filter|user}
+
+- **filter:** Returns an JSON array of filter configs
+- **user:** Returns the UI config
+- ... More comming soon
+
+**JSON structure: user**
+
+```
+{
+	"chain":[],
+	"toolbar":[
+		{"name":"filter","order":1},
+		{"name":"dedub","order":2},
+		{"name":"correlator","order":3},
+		{"name":"unique filter","order":4}
+	]
+}
+```
+---
+### POST /api/v1/config/{type}
+
+**Config Types:** {filter|user}
+
+- **filter:** Overwrite Filter Config
+- **user:** Overwrite UI Config
+- ... More comming soon
+
+**JSON structure: filter**
+
+```
+[
+	{
+		"name":"xyz",
+		"threshold":10,
+		"treshold-top":55,
+		"unit":"MosDev",
+		"active":false
+	},
+	{
+		"name":"no2",
+		"threshold":20,
+		"threshold-top":500,
+		"unit":"love babis",
+		"active":false
+	}
+]
+```
+
+```
+curl 	-H "Content-Type: application/json"
+			-X POST
+			-d '{"chain":[{"name":"filter","order":1}],
+					"toolbar":[{"name":"dedub","order":2},{"name":"correlator","order":3},{"name":"unique filter","order":4}]}'
+			http://riddle-api.mybluemix.net/api/v1/config/user
+```
+</xmp>
+
+<script src="../static/strapdown/strapdown.js"></script>
+</html>
+<style media="screen">
+	body{
+		background: #576987;
+	}
+	h1,p,ul,h2,h3
+	{
+	   color: white;
+	}
+	.pre{
+		color: black
+	}
+</style>
