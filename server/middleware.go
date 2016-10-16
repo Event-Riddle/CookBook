@@ -54,7 +54,7 @@ func validatePath(w http.ResponseWriter, r *http.Request, next http.HandlerFunc)
 func cors(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 	w.Header().Add("Access-Control-Allow-Origin", "*")
 	w.Header().Add("Content-Type", "application/json; charset=UTF-8")
-	w.Header().Add("Access-Control-Request-Method", "GET, POST")
+	w.Header().Add("Access-Control-Allow-Method", "GET, POST")
 	w.Header().Add("Access-Control-Allow-Headers", "content-type")
 
 	next(w, r)
