@@ -55,7 +55,7 @@ func cors(w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
 	w.Header().Add("Access-Control-Allow-Origin", "*")
 	w.Header().Add("Content-Type", "application/json")
 	w.Header().Add("Access-Control-Allow-Method", "GET, POST")
-	w.Header().Add("Access-Control-Allow-Headers", "content-type")
+	w.Header().Add("Access-Control-Allow-Headers", "Accept, Content-Type, Access-Control-Allow-origin, Access-Control-Allow-Method, Access-Control-Allow-Headers")
 
 	next(w, r)
 }
