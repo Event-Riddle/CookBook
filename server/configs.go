@@ -1,6 +1,7 @@
 package server
 
 type Filter struct {
+	Name                string  `json:"name"`
 	Active              bool    `json:"active"`
 	FilterTopId         string  `json:"filter-top-id"`
 	FilterBottomId      string  `json:"filter-bottom-id"`
