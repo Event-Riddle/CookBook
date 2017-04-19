@@ -70,6 +70,8 @@ func GetConfigStruct(ct string) interface{} {
 	switch ct {
 	case "filter":
 		return []Filter{}
+	case "correlator":
+		return Correlator{}
 	case "user":
 		return User{}
 	}

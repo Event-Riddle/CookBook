@@ -1,0 +1,10 @@
+{
+  "name": "test",
+  "timestamp": "identifier",
+  "timestamp_format": "234Tdsfas",
+  "matcher_id": "id",
+  "matcher_value": "15",
+  "time_treshold": 5,
+  "pitch":1
+}
+

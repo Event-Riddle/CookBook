@@ -7,7 +7,7 @@ import (
 	"regexp"
 )
 
-var validPath = regexp.MustCompile("^/api/v1/config/(filter|user)")
+var validPath = regexp.MustCompile("^/api/v1/config/(filter|user|correlator)")
 
 type InvalidConfigType struct{ error }
 

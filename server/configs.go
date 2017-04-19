@@ -10,6 +10,16 @@ type Filter struct {
 	Unit                string  `json:"unit"`
 }
 
+type Correlator struct {
+	Name            string `json:"name"`
+	Timestamp       string `json:"timestamp"`
+	TimestampFormat string `json:"timestamp_format"`
+	MatcherId       string `json:"matcher_id"`
+	MatcherValue    string `json:"matcher_value"`
+	TimeTreshold    int    `json:"time_treshold"`
+	Pitch           int    `json:"pitch"`
+}
+
 /************ User Config *******************/
 type User struct {
 	Toolbar []Items `json:"toolbar"`
