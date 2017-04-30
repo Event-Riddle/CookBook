@@ -1,7 +1,7 @@
 {
 	"ImportPath": "masterjulz/riddle-api",
 	"GoVersion": "go1.7",
-	"GodepVersion": "v74",
+	"GodepVersion": "v79",
 	"Deps": [
 		{
 			"ImportPath": "github.com/gorilla/mux",

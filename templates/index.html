@@ -23,11 +23,11 @@
 ---
 ### GET /api/v1/config/{type}
 
-**Config Types:** {filter|user}
+**Config Types:** {filter|user|correlator}
 
 - **filter:** Returns an JSON array of filter configs
 - **user:** Returns the UI config
-- ... More comming soon
+- **correlator:** Return the correlator config JSON 
 
 **JSON structure: user**
 
@@ -49,7 +49,7 @@
 
 - **filter:** Overwrite Filter Config
 - **user:** Overwrite UI Config
-- ... More comming soon
+- **correlator:** Overwrite Correlator Config
 
 **JSON structure: filter**
 
@@ -77,7 +77,28 @@ curl 	-H "Content-Type: application/json"
 			-X POST
 			-d '{"chain":[{"name":"filter","order":1}],
 					"toolbar":[{"name":"dedub","order":2},{"name":"correlator","order":3},{"name":"unique filter","order":4}]}'
-			http://riddle-api.mybluemix.net/api/v1/config/user
+			http://riddle-api.mybluemix.net/api/v1/config/filter
+```
+
+**JSON structure: correlator**
+
+```
+{
+  "matcher_id":"id",
+  "matcher_value":"15",
+  "name":"test",
+  "pitch":1,
+  "time_treshold":5,
+  "timestamp":"identifier",
+  "timestamp_format":"234Tdsfas"
+}
+```
+
+```
+curl 	-H "Content-Type: application/json"
+			-X POST
+			-d '{"matcher_id":"id","matcher_value":"15","name":"test","pitch":1,"time_treshold":5,"timestamp":"identifier","timestamp_format":"234Tdsfas"}`
+			http://riddle-api.mybluemix.net/api/v1/config/correlator
 ```
 </xmp>
 
